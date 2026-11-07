@@ -1,0 +1,332 @@
+/* iOS Sideload Server TUI Styles */
+
+Screen {
+    background: $surface;
+    color: $text;
+}
+
+#main-container {
+    height: 1fr;
+    padding: 1;
+}
+
+.tabbed-content {
+    height: 1fr;
+}
+
+.tab-pane {
+    padding: 1;
+    height: 1fr;
+}
+
+/* Dashboard */
+.dashboard {
+    height: 1fr;
+    layout: vertical;
+}
+
+.title {
+    text-align: center;
+    text-style: bold;
+    color: $primary;
+    margin: 1 0;
+    font-size: 18;
+}
+
+#status-bar {
+    text-align: center;
+    color: $text-muted;
+    margin-bottom: 1;
+    height: 1;
+}
+
+.stats-row {
+    height: auto;
+    margin-bottom: 1;
+}
+
+StatCard {
+    width: 1fr;
+    background: $panel;
+    border: solid $primary;
+    border-radius: 8;
+    padding: 1;
+    margin: 0 1;
+    layout: vertical;
+}
+
+.stat-value {
+    text-align: center;
+    text-style: bold;
+    font-size: 24;
+    color: $primary;
+    height: 2;
+}
+
+.stat-label {
+    text-align: center;
+    color: $text-muted;
+    font-size: 12;
+}
+
+/* Section titles */
+.section-title {
+    text-style: bold;
+    color: $primary;
+    margin: 1 0;
+    padding-left: 1;
+}
+
+/* Toolbar */
+.toolbar {
+    height: 3;
+    align: center middle;
+    margin-bottom: 1;
+}
+
+.toolbar .section-title {
+    margin: 0;
+    width: 1fr;
+}
+
+.toolbar Button {
+    margin-left: 1;
+}
+
+/* Data Tables */
+DataTable {
+    height: 1fr;
+    border: solid $panel-lighten-1;
+    border-radius: 4;
+}
+
+DataTable > .datatable--header {
+    background: $panel;
+    color: $text-muted;
+    text-style: bold;
+}
+
+DataTable > .datatable--cursor {
+    background: $primary 30%;
+}
+
+DataTable > .datatable--even-row {
+    background: $panel;
+}
+
+DataTable > .datatable--odd-row {
+    background: $surface;
+}
+
+/* Details Panel */
+.details-panel {
+    height: auto;
+    min-height: 10;
+    max-height: 20;
+    background: $panel;
+    border: solid $panel-lighten-1;
+    border-radius: 4;
+    padding: 1;
+    margin-top: 1;
+    overflow-y: auto;
+}
+
+.placeholder {
+    text-align: center;
+    color: $text-muted;
+    padding: 2;
+}
+
+.detail-title {
+    text-style: bold;
+    color: $primary;
+    margin-bottom: 1;
+    padding-bottom: 1;
+    border-bottom: solid $panel-lighten-1;
+}
+
+.detail-actions {
+    margin-top: 1;
+    height: 3;
+}
+
+.detail-actions Button {
+    margin-right: 1;
+}
+
+/* Config Form */
+.config-form {
+    max-width: 80;
+    margin: 1 auto;
+}
+
+.config-form Label {
+    margin-top: 1;
+    color: $text-muted;
+}
+
+.config-form Input, .config-form Select {
+    margin-top: 0;
+}
+
+.config-form .dialog-buttons {
+    margin-top: 2;
+}
+
+.config-info {
+    margin-top: 2;
+    padding: 1;
+    background: $panel;
+    border-radius: 4;
+}
+
+/* Dialogs */
+.dialog {
+    width: 80;
+    max-width: 100;
+    background: $panel;
+    border: solid $primary;
+    border-radius: 8;
+    padding: 2;
+}
+
+.dialog-title {
+    text-style: bold;
+    color: $primary;
+    text-align: center;
+    margin-bottom: 1;
+    font-size: 16;
+}
+
+.dialog Label {
+    margin-top: 1;
+    color: $text-muted;
+}
+
+.dialog Input {
+    margin-top: 0;
+}
+
+.dialog .instruction {
+    color: $text-muted;
+    margin: 0 0 0 2;
+    font-size: 12;
+}
+
+.dialog-buttons {
+    margin-top: 2;
+    align: center middle;
+}
+
+.dialog-buttons Button {
+    margin: 0 1;
+    min-width: 16;
+}
+
+/* Buttons */
+Button {
+    border-radius: 4;
+}
+
+Button.-primary {
+    background: $primary;
+    color: $text;
+}
+
+Button.-primary:hover {
+    background: $primary-lighten-1;
+}
+
+Button.-error {
+    background: $error;
+    color: $text;
+}
+
+Button.-warning {
+    background: $warning;
+    color: $text;
+}
+
+/* Log */
+#activity-log {
+    height: 1fr;
+    background: $surface;
+    border: solid $panel-lighten-1;
+    border-radius: 4;
+    padding: 1;
+}
+
+/* Selection highlights */
+ListView > ListItem.--highlight {
+    background: $primary 20%;
+}
+
+TreeNode.--highlight {
+    background: $primary 20%;
+}
+
+/* Scrollbars */
+.scrollbar {
+    background: $panel;
+    color: $primary;
+}
+
+.scrollbar--slider {
+    background: $primary 50%;
+    border-radius: 4;
+}
+
+.scrollbar--slider:hover {
+    background: $primary;
+}
+
+/* Focus styles */
+Input:focus, Select:focus, TextArea:focus {
+    border: solid $primary;
+}
+
+/* Status colors */
+.expiry-soon {
+    color: $warning;
+}
+
+.expiry-expired {
+    color: $error;
+}
+
+/* Footer */
+Footer {
+    background: $panel;
+    color: $text-muted;
+}
+
+/* Header */
+Header {
+    background: $panel;
+    color: $text;
+    text-style: bold;
+}
+
+/* Tab styles */
+.tabbed-content .tab-header {
+    background: $panel;
+    border-bottom: solid $panel-lighten-1;
+}
+
+.tabbed-content .tab-header .tab {
+    color: $text-muted;
+    padding: 0 2;
+    margin: 0 1;
+    min-width: 12;
+}
+
+.tabbed-content .tab-header .tab.--active {
+    color: $primary;
+    text-style: bold;
+    border-bottom: solid $primary;
+}
+
+.tabbed-content .tab-header .tab:hover {
+    color: $text;
+    background: $surface;
+}

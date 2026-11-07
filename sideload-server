@@ -1,0 +1,26 @@
+#!/data/data/com.termux/files/usr/bin/bash
+# iOS Sideload Server - Termux Launcher
+
+# Set up environment
+export PYTHONPATH="${PYTHONPATH}:$(dirname "$0")"
+
+# Default directories
+DATA_DIR="${HOME}/.sideload-server/data"
+UPLOAD_DIR="${HOME}/.sideload-server/uploads"
+
+# Create directories if they don't exist
+mkdir -p "$DATA_DIR"
+mkdir -p "$UPLOAD_DIR"
+
+# Check for zsign
+if ! command -v zsign &> /dev/null; then
+    echo "Warning: zsign not found in PATH. Signing with certificates will not work."
+    echo "Install with: pkg install zsign (or build from source)"
+fi
+
+# Run the server
+exec python -m sideload_server.main \
+    --data-dir "$DATA_DIR" \
+    --upload-dir "$UPLOAD_DIR" \
+    --zsign-path zsign \
+    "$@"

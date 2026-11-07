@@ -1,0 +1,18 @@
+# iOS Sideload Server for Termux - Requirements
+# Core dependencies
+textual>=0.52.0
+pymobiledevice3>=4.0.0
+
+# Optional: for Apple ID signing with anisette
+# anisette-py>=0.1.0  # If using custom anisette server
+
+# System dependencies (install via Termux pkg):
+# pkg install python clang make openssl libffi libusb zlib
+# pkg install rust  # For building some dependencies if needed
+
+# zsign binary (for signing):
+# Build from source: https://github.com/zhlynn/zsign
+# Or install via: pkg install zsign (if available in Termux repos)
+
+# Note: On Termux armv7a, you may need to build zsign from source
+# since pre-built binaries might not be available for armv7.
